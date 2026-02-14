@@ -1,0 +1,1 @@
+gcc main.c assets/modules.c assets/ui/ui.c -o main && main.exe
