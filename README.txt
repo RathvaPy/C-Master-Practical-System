@@ -16,3 +16,5 @@ Project Details
         રીત ૧: ફોલ્ડરમાં આપેલી b.bat ફાઈલ રન કરવી. (Easy Way)
         રીત ૨: ટર્મિનલમાં આ કમાન્ડ ટાઈપ કરવો:
         gcc main.c assets/modules.c assets/ui/ui.c -o main && main.exe
+
+GitHub: repo:RathvaPy/C-Master-Practical-System 

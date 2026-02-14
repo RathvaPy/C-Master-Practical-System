@@ -32,7 +32,6 @@ typedef struct {
 typedef struct {
     int empId;
     char name[50];
-    char designation[30];
     float salary;
     char department[30];
 } Employee;

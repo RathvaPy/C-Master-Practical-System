@@ -139,8 +139,6 @@ void practical_6_copy_string() {
     printf("  Target String : %s (Copied Successfully)\n", target);
     printf("------------------------------------\n");
 
-    printf("Theory: strcpy() copies the string including null terminator.\n");
-
     while (getchar() != '\n');
 }
 void practical_7_compare_strings() {
@@ -176,7 +174,7 @@ void practical_8_concatenate_strings() {
 
     printf("Enter the first string: ");
     scanf(" %[^\n]s", str1);
-    printf("Enter the second string to join: ");
+    printf("Enter the second string: ");
     scanf(" %[^\n]s", str2);
 
     // Logic: strcat(target_string, source_string)
@@ -411,9 +409,6 @@ void practical_16_employee_struct() {
     printf("Enter Employee Name    : ");
     scanf(" %[^\n]s", e.name);
 
-    printf("Enter Designation      : ");
-    scanf(" %[^\n]s", e.designation);
-
     printf("Enter Department       : ");
     scanf(" %[^\n]s", e.department);
 
@@ -421,12 +416,11 @@ void practical_16_employee_struct() {
     scanf("%f", &e.salary);
     
     //Output
-    printf("\n==========================================\n");
+    printf("\n============================================\n");
     printf("           EMPLOYEE PAYROLL SLIP           \n");
-    printf("==========================================\n");
+    printf("=============================================\n");
     printf("  ID          : %d\n", e.empId);
     printf("  Name        : %s\n", e.name);
-    printf("  Designation : %s\n", e.designation);
     printf("  Department  : %s\n", e.department);
     printf("  Basic Salary: %.2f INR\n", e.salary);
     printf("==========================================\n");
@@ -532,6 +526,7 @@ void practical_19_union_result() {
     while (getchar() != '\n');
 }
 void practical_20_struct_union_size() {
+    system("cls");
     struct SizeStruct s;
     union SizeUnion u;
 
@@ -539,21 +534,23 @@ void practical_20_struct_union_size() {
 
     printf("Structure Members: int(4), float(4), char(1)\n");
     printf("Union Members    : int(4), float(4), char(1)\n");
-
+        /* Structure ni size: 4 + 4 + 1 = 9 bytes, પરંતુ કમ્પાઇલર ડેટાને 4-byte alignment (padding) માં રાખે છે. 
+        int i (4 bytes)
+        float f (4 bytes)
+        char c (1 byte) + 3 bytes padding (4-byte boundary પૂરી કરવા માટે) 
+        કુલ =  4 + 4 + 1 + 3 (padding) = 12 bytes for Structure
+        */
     printf("\n------------------------------------\n");
     // sizeof() 
     printf("  Size of Structure: %zu bytes\n", sizeof(s));
     printf("  Size of Union    : %zu bytes\n", sizeof(u));
     printf("------------------------------------\n");
-
-    printf("\nLogic Explanation:\n");
-    printf("1. Structure size is the SUM of all members (plus padding).\n");
-    printf("2. Union size is equal to the LARGEST member's size.\n");
-
+    
     while (getchar() != '\n');
 }
 void practical_21_login_system() {
     // Username And Password 
+    system("cls");
     UserAuth master = {"admin", "bca123"}; 
     UserAuth input; // 
 
